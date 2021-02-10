@@ -11,13 +11,13 @@ class Page{
         "data"=>[]
     ];
     //Primeiro método a ser executado
-    public function __construct($opts = array()){
+    public function __construct($opts = array(),$tpl_dir = "/keven/ecommerce/views/"){
 
         $this->options = array_merge($this->defaults,$opts);
 
         $config = array(
             //$_SERVER["DOCUMENT_ROOT"] - Pasta do diretório root
-            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/keven/ecommerce/views/",
+            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
             "cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."keven/ecommerce/views-cache/",
             "debug"         => false
            );
